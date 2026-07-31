@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI IT Company — Локальный ИИ, создающий C#-приложения и игры</title>
+<meta name="description" content="Desktop-приложение, которое имитирует полноценную IT-компанию силами специализированных ИИ-агентов. Работает локально через Ollama. Бесплатно, приватно, без интернета.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head><body>
+<header><div class="container nav">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>AI IT Company</a>
+  <nav class="nav-links">
+    <a href="index.html">Главная</a>
+    <a href="quick-start.html">Быстрый старт</a>
+    <a href="download.html">Скачать</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contributing.html">Участие</a>
+    <a href="license.html">Лицензия</a>
+  </nav>
+  <div class="nav-tools">
+    <div class="lang-switch">
+      <a href="../en/index.html">EN</a>
+      <a href="../ru/index.html" class="active">RU</a>
+      <a href="../zh/index.html">中文</a>
+    </div>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </div>
+</div></header>
+
+<section class="hero"><div class="container">
+  <h1>Ваша личная <span class="grad">ИИ IT-компания</span><br>прямо на вашем ПК</h1>
+  <p class="lead">Команда специализированных ИИ-агентов превращает вашу идею
+  в рабочее C#-приложение или MonoGame-игру. Всё локально, через Ollama —
+  без облачных подписок и без утечки ваших данных наружу.</p>
+  <div class="cta">
+    <a class="btn btn-primary" data-gh-latest href="#">⬇ Скачать последнюю сборку</a>
+    <a class="btn btn-secondary" href="quick-start.html">Начать →</a>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <h2>Почему AI IT Company</h2>
+  <p class="section-lead">Не очередная обёртка над ИИ, а полноценный конвейер: архитектор → кодеры → тестировщик → сборщик → исправитель → секретарь.</p>
+  <div class="grid">
+    <div class="card"><span class="icon">🔒</span><h3>100% локально</h3>
+      <p>Ваш код и идеи не покидают компьютер. Ни облака, ни аккаунтов, ни телеметрии.</p></div>
+    <div class="card"><span class="icon">💸</span><h3>Бесплатно навсегда</h3>
+      <p>Работа через Ollama — без API-ключей, подписок и лимитов на токены.</p></div>
+    <div class="card"><span class="icon">🎯</span><h3>Правильная модель для каждой задачи</h3>
+      <p>Для каждого агента можно назначить свою модель: маленькая для интерпретации, большая для кодинга.</p></div>
+    <div class="card"><span class="icon">🧩</span><h3>Поэтапная разработка</h3>
+      <p>Каждый этап оставляет собирающуюся программу и git-коммит. Провал одного этапа не убивает остальные.</p></div>
+    <div class="card"><span class="icon">🩹</span><h3>Авто-исправление ошибок сборки</h3>
+      <p>Если сборка упала — агент-исправитель читает лог и патчит код. До 3 попыток на этап.</p></div>
+    <div class="card"><span class="icon">⚡</span><h3>Скромное железо</h3>
+      <p>Проверено на Ryzen 5, 32 ГБ DDR4, 1 ГБ VRAM с моделями qwen2.5-coder:7b и :14b.</p></div>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <h2>Команда агентов</h2>
+  <p class="section-lead">Каждая роль — отдельный агент со своим системным промптом и, при желании, своей моделью.</p>
+  <div class="agents">
+    <div class="agent"><div class="agent-icon">🧭</div><div><strong>Интерпретатор</strong><span>Разбирает запрос, определяет режим и тип проекта.</span></div></div>
+    <div class="agent"><div class="agent-icon">🏛</div><div><strong>Архитектор</strong><span>Пишет ТЗ и разбивает работу на независимые этапы.</span></div></div>
+    <div class="agent"><div class="agent-icon">🏗</div><div><strong>Скаффолдер</strong><span>Создаёт каркас проекта через <code>dotnet new</code>.</span></div></div>
+    <div class="agent"><div class="agent-icon">⚙</div><div><strong>Кодер-Backend</strong><span>Пишет сервисы, работу с данными, API.</span></div></div>
+    <div class="agent"><div class="agent-icon">🎨</div><div><strong>Кодер-Frontend</strong><span>Пишет WinUI 3 XAML + MVVM через CommunityToolkit.</span></div></div>
+    <div class="agent"><div class="agent-icon">🎮</div><div><strong>Кодер-Game</strong><span>Пишет игры на MonoGame DesktopGL.</span></div></div>
+    <div class="agent"><div class="agent-icon">🧪</div><div><strong>Тестировщик</strong><span>Генерирует xUnit + FluentAssertions + Moq тесты.</span></div></div>
+    <div class="agent"><div class="agent-icon">🔧</div><div><strong>Сборщик</strong><span>Выполняет <code>dotnet build</code>, коммитит в git при успехе.</span></div></div>
+    <div class="agent"><div class="agent-icon">🩹</div><div><strong>Исправитель</strong><span>Читает лог сборки, патчит сломанные файлы.</span></div></div>
+    <div class="agent"><div class="agent-icon">📝</div><div><strong>Секретарь</strong><span>Пишет итоговый REPORT.md со всеми фактами и статистикой.</span></div></div>
+  </div>
+</div></section>
+
+<section><div class="container" style="text-align:center">
+  <h2>Готовы создавать?</h2>
+  <p class="section-lead" style="margin-left:auto;margin-right:auto">
+  Скачайте последний релиз или клонируйте репозиторий и соберите приложение сами.</p>
+  <div class="cta">
+    <a class="btn btn-primary" data-gh-latest href="#">⬇ Скачать</a>
+    <a class="btn btn-secondary" data-gh-repo href="#">⭐ Поставить звезду на GitHub</a>
+  </div>
+</div></section>
+
+<footer><div class="container foot">
+  <div>© <span id="year">2025</span> AI IT Company. Свободно для личного и коммерческого использования.</div>
+  <div><a href="privacy.html">Приватность</a> · <a href="license.html">Лицензия</a> · <a data-gh-repo href="#">GitHub</a></div>
+</div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script src="../assets/js/main.js"></script>
+</body></html>
