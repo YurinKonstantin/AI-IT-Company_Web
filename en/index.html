@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI IT Company — Local AI that builds C# apps and games</title>
+<meta name="description" content="A desktop app that emulates a full IT company with specialized AI agents. Runs locally via Ollama. Free, private, offline-friendly.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header><div class="container nav">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>AI IT Company</a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="quick-start.html">Quick Start</a>
+    <a href="download.html">Download</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contributing.html">Contribute</a>
+    <a href="license.html">License</a>
+  </nav>
+  <div class="nav-tools">
+    <div class="lang-switch">
+      <a href="../en/index.html" class="active">EN</a>
+      <a href="../ru/index.html">RU</a>
+      <a href="../zh/index.html">中文</a>
+    </div>
+    <button id="themeBtn" class="theme-btn" aria-label="Toggle theme">🌙</button>
+  </div>
+</div></header>
+
+<section class="hero"><div class="container">
+  <h1>Your personal <span class="grad">AI IT company</span><br>right on your PC</h1>
+  <p class="lead">A team of specialized AI agents that turn your idea into a working
+  C# application or MonoGame game — running locally through Ollama, without cloud
+  fees or data leaving your computer.</p>
+  <div class="cta">
+    <a class="btn btn-primary" data-gh-latest href="#">⬇ Download latest build</a>
+    <a class="btn btn-secondary" href="quick-start.html">Get started →</a>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <h2>Why AI IT Company</h2>
+  <p class="section-lead">Not another AI wrapper. A full pipeline: architect → coders → tester → builder → fixer → secretary.</p>
+  <div class="grid">
+    <div class="card"><span class="icon">🔒</span><h3>100% local</h3>
+      <p>Your code and ideas never leave your machine. No cloud, no accounts, no telemetry.</p></div>
+    <div class="card"><span class="icon">💸</span><h3>Free forever</h3>
+      <p>Runs on Ollama — no API keys, no subscriptions, no token limits.</p></div>
+    <div class="card"><span class="icon">🎯</span><h3>Right model for each job</h3>
+      <p>Assign a different model per agent. Small model for interpretation, big model for coding.</p></div>
+    <div class="card"><span class="icon">🧩</span><h3>Stage-based pipeline</h3>
+      <p>Every stage leaves a compiling program and a git commit. Failure of one stage doesn't kill others.</p></div>
+    <div class="card"><span class="icon">🩹</span><h3>Auto-fix on build errors</h3>
+      <p>If build fails, a fixer agent reads the log and patches the code — up to 3 attempts per stage.</p></div>
+    <div class="card"><span class="icon">⚡</span><h3>Modest hardware</h3>
+      <p>Tested on Ryzen 5, 32 GB DDR4, 1 GB GPU with qwen2.5-coder:7b/14b.</p></div>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <h2>Meet the team</h2>
+  <p class="section-lead">Each role is a separate agent with its own system prompt and (optionally) its own model.</p>
+  <div class="agents">
+    <div class="agent"><div class="agent-icon">🧭</div><div><strong>Interpreter</strong><span>Understands your request, picks mode and project type.</span></div></div>
+    <div class="agent"><div class="agent-icon">🏛</div><div><strong>Architect</strong><span>Writes the spec and splits work into independent stages.</span></div></div>
+    <div class="agent"><div class="agent-icon">🏗</div><div><strong>Scaffolder</strong><span>Bootstraps a project skeleton via <code>dotnet new</code>.</span></div></div>
+    <div class="agent"><div class="agent-icon">⚙</div><div><strong>Backend Coder</strong><span>Writes C# services, data layer and APIs.</span></div></div>
+    <div class="agent"><div class="agent-icon">🎨</div><div><strong>Frontend Coder</strong><span>Writes WinUI 3 XAML + MVVM via CommunityToolkit.</span></div></div>
+    <div class="agent"><div class="agent-icon">🎮</div><div><strong>Game Coder</strong><span>Writes MonoGame DesktopGL games.</span></div></div>
+    <div class="agent"><div class="agent-icon">🧪</div><div><strong>Tester</strong><span>Generates xUnit + FluentAssertions + Moq tests.</span></div></div>
+    <div class="agent"><div class="agent-icon">🔧</div><div><strong>Builder</strong><span>Runs <code>dotnet build</code>, commits to git on success.</span></div></div>
+    <div class="agent"><div class="agent-icon">🩹</div><div><strong>Error Fixer</strong><span>Reads build log, patches broken files.</span></div></div>
+    <div class="agent"><div class="agent-icon">📝</div><div><strong>Secretary</strong><span>Writes final REPORT.md with all facts and stats.</span></div></div>
+  </div>
+</div></section>
+
+<section><div class="container" style="text-align:center">
+  <h2>Ready to build?</h2>
+  <p class="section-lead" style="margin-left:auto;margin-right:auto">
+  Download the latest release or clone the repo and build it yourself.</p>
+  <div class="cta">
+    <a class="btn btn-primary" data-gh-latest href="#">⬇ Download</a>
+    <a class="btn btn-secondary" data-gh-repo href="#">⭐ Star on GitHub</a>
+  </div>
+</div></section>
+
+<footer><div class="container foot">
+  <div>© <span id="year">2025</span> AI IT Company. Free for personal & commercial use.</div>
+  <div>
+    <a href="privacy.html">Privacy</a> · 
+    <a href="license.html">License</a> · 
+    <a data-gh-repo href="#">GitHub</a>
+  </div>
+</div></footer>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script src="../assets/js/main.js"></script>
+</body></html>
