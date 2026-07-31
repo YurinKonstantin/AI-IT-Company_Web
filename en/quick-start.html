@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quick Start · AI IT Company</title>
+<link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<header><div class="container nav">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>AI IT Company</a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a><a href="quick-start.html">Quick Start</a>
+    <a href="download.html">Download</a><a href="faq.html">FAQ</a>
+    <a href="contributing.html">Contribute</a><a href="license.html">License</a>
+  </nav>
+  <div class="nav-tools">
+    <div class="lang-switch">
+      <a href="../en/quick-start.html" class="active">EN</a>
+      <a href="../ru/quick-start.html">RU</a>
+      <a href="../zh/quick-start.html">中文</a>
+    </div>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </div>
+</div></header>
+
+<main class="article">
+<h1>Quick Start</h1>
+<p class="updated">5-minute setup guide</p>
+
+<h2>1. Prerequisites</h2>
+<ul>
+  <li><strong>Windows 10/11</strong> (x64).</li>
+  <li><strong>.NET 10 SDK</strong> — <a href="https://dotnet.microsoft.com/download">download</a>.</li>
+  <li><strong>Ollama</strong> — <a href="https://ollama.com/download">download</a>.</li>
+  <li><strong>Git</strong> — required for per-stage version control.</li>
+  <li>16+ GB RAM recommended (32 GB for 14B models).</li>
+</ul>
+
+<h2>2. Install a model</h2>
+<p>Open a terminal and pull a coding model. We recommend <code>qwen2.5-coder</code>:</p>
+<pre><code>ollama pull qwen2.5-coder:7b
+# or, if you have 32 GB RAM:
+ollama pull qwen2.5-coder:14b</code></pre>
+<p>Make sure Ollama is running: <code>ollama serve</code> (or launch the tray app).</p>
+
+<h2>3. Get the application</h2>
+<p>Two options:</p>
+<ol>
+  <li><strong>Grab the ready-made build</strong> from the
+    <a data-gh-latest href="#">Releases page</a>, unpack and run <code>AI_IT_Company.exe</code>.</li>
+  <li><strong>Build from source</strong>:
+    <pre><code>git clone https://github.com/YOURUSER/AI_IT_Company.git
+cd AI_IT_Company
+dotnet build -c Release</code></pre>
+  </li>
+</ol>
+
+<h2>4. First run</h2>
+<ol>
+  <li>Launch the app.</li>
+  <li>Open <strong>Settings</strong> and verify the Ollama URL (default <code>http://localhost:11434</code>). Click <em>Check</em> — you should see ✅.</li>
+  <li>Go to <strong>Models</strong> — the list of installed models will appear. From here you can pull or delete models.</li>
+  <li>Go to <strong>Agents</strong>. For each agent (Architect, Backend Coder, Frontend Coder, ...) pick the model that will handle it. Different agents can use different models.</li>
+</ol>
+
+<h2>5. Create your first project</h2>
+<ol>
+  <li>Open <strong>Chat</strong> tab.</li>
+  <li>Describe what you want in plain English or Russian, e.g.:
+    <em>"Create a WinUI 3 app for tracking daily expenses with a chart of monthly spend."</em></li>
+  <li>Press <strong>Run</strong>. Watch the pipeline: Interpreter → Architect → Scaffolder → Coders → Tester → Builder → (Fixer) → Secretary.</li>
+  <li>When done, open the output folder (path is shown in the log). Inside you'll find the generated project, a Git repo with per-stage commits, <code>TZ.md</code> (spec) and <code>REPORT.md</code>.</li>
+</ol>
+
+<h2>6. Suggested models per agent</h2>
+<table>
+  <thead><tr><th>Agent</th><th>Recommended</th><th>Fast alternative</th></tr></thead>
+  <tbody>
+    <tr><td>Interpreter</td><td>llama3.1:8b</td><td>qwen2.5:3b</td></tr>
+    <tr><td>Architect</td><td>qwen2.5-coder:14b</td><td>qwen2.5-coder:7b</td></tr>
+    <tr><td>Backend Coder</td><td>qwen2.5-coder:14b</td><td>qwen2.5-coder:7b</td></tr>
+    <tr><td>Frontend Coder</td><td>qwen2.5-coder:14b</td><td>qwen2.5-coder:7b</td></tr>
+    <tr><td>Game Coder</td><td>qwen2.5-coder:14b</td><td>deepseek-coder-v2:16b</td></tr>
+    <tr><td>Tester</td><td>qwen2.5-coder:7b</td><td>qwen2.5-coder:3b</td></tr>
+    <tr><td>Error Fixer</td><td>qwen2.5-coder:14b</td><td>qwen2.5-coder:7b</td></tr>
+    <tr><td>Secretary</td><td>llama3.1:8b</td><td>gemma2:9b</td></tr>
+  </tbody>
+</table>
+
+<h2>7. Troubleshooting</h2>
+<ul>
+  <li><strong>Ollama not reachable</strong> — check that <code>ollama serve</code> is running and the port matches Settings.</li>
+  <li><strong>Model runs out of memory</strong> — pick a smaller quant (e.g. <code>:7b-q4</code>) or lower <em>ContextWindow</em> in agent settings.</li>
+  <li><strong>Build fails repeatedly</strong> — the Fixer tries up to 3 times per stage. If it still fails, check <code>REPORT.md</code> and the raw model output in the output folder.</li>
+</ul>
+<p>See the <a href="faq.html">FAQ</a> for more, or open an issue on <a data-gh-repo href="#">GitHub</a>.</p>
+</main>
+
+<footer><div class="container foot">
+  <div>© <span id="year">2025</span> AI IT Company.</div>
+  <div><a href="privacy.html">Privacy</a> · <a href="license.html">License</a> · <a data-gh-repo href="#">GitHub</a></div>
+</div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script src="../assets/js/main.js"></script>
+</body></html>
