@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Быстрый старт · AI IT Company</title>
+<link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<header><div class="container nav">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>AI IT Company</a>
+  <nav class="nav-links">
+    <a href="index.html">Главная</a><a href="quick-start.html">Быстрый старт</a>
+    <a href="download.html">Скачать</a><a href="faq.html">FAQ</a>
+    <a href="contributing.html">Участие</a><a href="license.html">Лицензия</a>
+  </nav>
+  <div class="nav-tools">
+    <div class="lang-switch">
+      <a href="../en/quick-start.html">EN</a>
+      <a href="../ru/quick-start.html" class="active">RU</a>
+      <a href="../zh/quick-start.html">中文</a>
+    </div>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </div>
+</div></header>
+
+<main class="article">
+<h1>Быстрый старт</h1>
+<p class="updated">Установка за 5 минут</p>
+
+<h2>1. Что понадобится</h2>
+<ul>
+  <li><strong>Windows 10/11</strong> (x64).</li>
+  <li><strong>.NET 10 SDK</strong> — <a href="https://dotnet.microsoft.com/download">скачать</a>.</li>
+  <li><strong>Ollama</strong> — <a href="https://ollama.com/download">скачать</a>.</li>
+  <li><strong>Git</strong> — нужен для поэтапного версионирования.</li>
+  <li>Рекомендуется 16+ ГБ RAM (32 ГБ для моделей 14B).</li>
+</ul>
+
+<h2>2. Установите модель</h2>
+<p>Откройте терминал и загрузите модель для кодинга. Мы рекомендуем <code>qwen2.5-coder</code>:</p>
+<pre><code>ollama pull qwen2.5-coder:7b
+# или, если у вас 32 ГБ RAM:
+ollama pull qwen2.5-coder:14b</code></pre>
+<p>Убедитесь, что Ollama запущена: <code>ollama serve</code> (или значок в трее).</p>
+
+<h2>3. Получите приложение</h2>
+<p>Два варианта:</p>
+<ol>
+  <li><strong>Скачайте готовую сборку</strong> со страницы
+    <a data-gh-latest href="#">Releases</a>, распакуйте и запустите <code>AI_IT_Company.exe</code>.</li>
+  <li><strong>Соберите из исходников</strong>:
+    <pre><code>git clone https://github.com/YOURUSER/AI_IT_Company.git
+cd AI_IT_Company
+dotnet build -c Release</code></pre>
+  </li>
+</ol>
+
+<h2>4. Первый запуск</h2>
+<ol>
+  <li>Запустите приложение.</li>
+  <li>Откройте <strong>Настройки</strong> и проверьте URL Ollama (по умолчанию <code>http://localhost:11434</code>). Нажмите <em>Проверить</em> — должно быть ✅.</li>
+  <li>Перейдите в <strong>Модели</strong> — увидите список установленных моделей. Здесь же можно скачать или удалить модели.</li>
+  <li>Перейдите в <strong>Агенты</strong>. Для каждого агента (Архитектор, Backend, Frontend, ...) выберите модель, которая будет его выполнять. Разные агенты могут использовать разные модели.</li>
+</ol>
+
+<h2>5. Создайте первый проект</h2>
+<ol>
+  <li>Откройте вкладку <strong>Чат</strong>.</li>
+  <li>Опишите задачу простыми словами, например:
+    <em>«Создай WinUI 3 приложение для учёта ежедневных расходов с графиком трат по месяцам»</em>.</li>
+  <li>Нажмите <strong>Запустить</strong>. Следите за конвейером: Интерпретатор → Архитектор → Скаффолдер → Кодеры → Тестировщик → Сборщик → (Исправитель) → Секретарь.</li>
+  <li>По завершении откройте папку вывода (путь показан в логах). Внутри — сгенерированный проект, git-репозиторий с коммитами по этапам, <code>TZ.md</code> (техзадание) и <code>REPORT.md</code>.</li>
+</ol>
+
+<h2>6. Рекомендации по моделям под агентов</h2>
+<table>
+  <thead><tr><th>Агент</th><th>Рекомендуется</th><th>Быстрая альтернатива</th></tr></thead>
+  <tbody>
+    <tr><td>Интерпретатор</td><td>llama3.1:8b</td><td>qwen2.5:3b</td></tr>
+    <tr><td>Архитектор</td><td>qwen2.5-coder:14b</td><td>qwen2.5-coder:7b</td></tr>
+    <tr><td>Кодер-Backend</td><td>qwen2.5-coder:14b</td><td>qwen2.5-coder:7b</td></tr>
+    <tr><td>Кодер-Frontend</td><td>qwen2.5-coder:14b</td><td>qwen2.5-coder:7b</td></tr>
+    <tr><td>Кодер-Game</td><td>qwen2.5-coder:14b</td><td>deepseek-coder-v2:16b</td></tr>
+    <tr><td>Тестировщик</td><td>qwen2.5-coder:7b</td><td>qwen2.5-coder:3b</td></tr>
+    <tr><td>Исправитель</td><td>qwen2.5-coder:14b</td><td>qwen2.5-coder:7b</td></tr>
+    <tr><td>Секретарь</td><td>llama3.1:8b</td><td>gemma2:9b</td></tr>
+  </tbody>
+</table>
+
+<h2>7. Если что-то пошло не так</h2>
+<ul>
+  <li><strong>Ollama недоступна</strong> — проверьте, что <code>ollama serve</code> запущен и порт совпадает с настройками.</li>
+  <li><strong>Модель не помещается в память</strong> — выберите меньшую квантизацию (например, <code>:7b-q4</code>) или уменьшите <em>ContextWindow</em> в настройках агента.</li>
+  <li><strong>Сборка постоянно падает</strong> — Исправитель делает до 3 попыток на этап. Если ошибка всё равно есть — посмотрите <code>REPORT.md</code> и сырой ответ модели в папке вывода.</li>
+</ul>
+<p>Больше вопросов — в <a href="faq.html">FAQ</a> или Issues на <a data-gh-repo href="#">GitHub</a>.</p>
+</main>
+
+<footer><div class="container foot">
+  <div>© <span id="year">2025</span> AI IT Company.</div>
+  <div><a href="privacy.html">Приватность</a> · <a href="license.html">Лицензия</a> · <a data-gh-repo href="#">GitHub</a></div>
+</div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script src="../assets/js/main.js"></script>
+</body></html>
