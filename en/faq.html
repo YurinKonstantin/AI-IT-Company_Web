@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAQ · AI IT Company</title>
+<link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<header><div class="container nav">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>AI IT Company</a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a><a href="quick-start.html">Quick Start</a>
+    <a href="download.html">Download</a><a href="faq.html">FAQ</a>
+    <a href="contributing.html">Contribute</a><a href="license.html">License</a>
+  </nav>
+  <div class="nav-tools">
+    <div class="lang-switch">
+      <a href="../en/faq.html" class="active">EN</a>
+      <a href="../ru/faq.html">RU</a>
+      <a href="../zh/faq.html">中文</a>
+    </div>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </div>
+</div></header>
+
+<main class="article">
+<h1>Frequently Asked Questions</h1>
+
+<h3>Is it really free?</h3>
+<p>Yes. The application is free, and it uses local models via Ollama — you pay nothing for inference. The only "cost" is disk space and electricity.</p>
+
+<h3>Does it need internet?</h3>
+<p>Only for downloading models the first time. After that everything works offline.</p>
+
+<h3>What kind of projects can it build?</h3>
+<p>Today: WinUI 3 desktop apps, MonoGame games, ASP.NET/Console apps in C#, with xUnit tests. More project types are planned.</p>
+
+<h3>What hardware do I need?</h3>
+<p>The minimum tested config is Ryzen 5, 32 GB DDR4, 1 GB GPU running <code>qwen2.5-coder:7b</code> or <code>:14b</code>. Faster CPU/GPU and more RAM speed things up but are not required. For 14B models 32 GB RAM is strongly recommended.</p>
+
+<h3>Which models work best?</h3>
+<p><code>qwen2.5-coder:14b</code> for coding agents; <code>llama3.1:8b</code> or <code>gemma2:9b</code> for interpretation and reporting. See the <a href="quick-start.html">Quick Start</a> table.</p>
+
+<h3>Can I use different models for different agents?</h3>
+<p>Yes — that's the whole point. Each agent has its own settings: model, temperature, context window, timeout. A small fast model can handle interpretation while a heavier one handles code generation.</p>
+
+<h3>Where are generated projects saved?</h3>
+<p>By default in <code>%LocalAppData%\AiItCompany\Output\&lt;projectId&gt;</code>. Each project has its own folder with the generated code, a Git repository with per-stage commits, <code>TZ.md</code> (spec) and <code>REPORT.md</code>.</p>
+
+<h3>Does the app modify my code without asking?</h3>
+<p>Only inside its own output folder. It never touches other places on your disk. If you point it at an existing project, it makes a full backup first.</p>
+
+<h3>What if a build fails?</h3>
+<p>The Error Fixer agent tries up to 3 times per stage, reading the compiler log and patching files. If it still fails, the pipeline reverts to the last successful git commit and continues with independent stages.</p>
+
+<h3>Can I use OpenAI / Anthropic / Groq instead of Ollama?</h3>
+<p>Not yet in the current release. Ollama is the only supported provider today. Support for OpenAI-compatible endpoints (LM Studio, OpenAI API, OpenRouter) is planned.</p>
+
+<h3>Is my code sent anywhere?</h3>
+<p>No. Everything happens locally between the app and your local Ollama instance. See <a href="privacy.html">Privacy Policy</a> for details.</p>
+
+<h3>Can I customize the agent prompts?</h3>
+<p>Yes. Open Settings → Prompts, override any agent's system prompt. Leave empty to fall back to the default prompt from code.</p>
+
+<h3>Why C# / WinUI / MonoGame specifically?</h3>
+<p>Because that's the author's focus. The architecture is provider-agnostic — new agent roles and project types can be added by writing one class each.</p>
+
+<h3>How do I get help?</h3>
+<p>Open an issue on <a data-gh-repo href="#">GitHub</a> with your log and the raw model output. See <a href="contributing.html">Contribute</a> for details on what to include.</p>
+</main>
+
+<footer><div class="container foot">
+  <div>© <span id="year">2025</span> AI IT Company.</div>
+  <div><a href="privacy.html">Privacy</a> · <a href="license.html">License</a> · <a data-gh-repo href="#">GitHub</a></div>
+</div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script src="../assets/js/main.js"></script>
+</body></html>
