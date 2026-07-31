@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Скачать · AI IT Company</title>
+<link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<header><div class="container nav">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>AI IT Company</a>
+  <nav class="nav-links">
+    <a href="index.html">Главная</a><a href="quick-start.html">Быстрый старт</a>
+    <a href="download.html">Скачать</a><a href="faq.html">FAQ</a>
+    <a href="contributing.html">Участие</a><a href="license.html">Лицензия</a>
+  </nav>
+  <div class="nav-tools">
+    <div class="lang-switch">
+      <a href="../en/download.html">EN</a>
+      <a href="../ru/download.html" class="active">RU</a>
+      <a href="../zh/download.html">中文</a>
+    </div>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </div>
+</div></header>
+
+<main class="article">
+<h1>Скачать</h1>
+<p class="updated">Все сборки размещаются на странице GitHub Releases</p>
+
+<div class="cta" style="margin:32px 0">
+  <a class="btn btn-primary" data-gh-latest href="#">⬇ Последний релиз (рекомендуется)</a>
+  <a class="btn btn-secondary" data-gh-releases href="#">Все релизы</a>
+</div>
+
+<h2>Системные требования</h2>
+<ul>
+  <li>Windows 10 версии 1809 или Windows 11 (x64).</li>
+  <li>Windows App SDK runtime — устанавливается автоматически при первом запуске, если отсутствует.</li>
+  <li>.NET 10 Desktop Runtime.</li>
+  <li>Ollama, установленная и запущенная локально.</li>
+  <li>Свободное место на диске: 500 МБ на приложение + место под модели (каждая 7B-модель ≈ 4–5 ГБ).</li>
+</ul>
+
+<h2>Как установить</h2>
+<ol>
+  <li>Скачайте ZIP-архив последней версии по кнопке выше.</li>
+  <li>Распакуйте его в любую папку (например, <code>C:\Programs\AI_IT_Company</code>).</li>
+  <li>Запустите <code>AI_IT_Company.exe</code>.</li>
+  <li>Если Windows SmartScreen ругается — нажмите <em>Подробнее → Выполнить в любом случае</em> (сборки не подписаны).</li>
+  <li>Следуйте <a href="quick-start.html">Быстрому старту</a> для настройки Ollama и агентов.</li>
+</ol>
+
+<h2>Сборка из исходников</h2>
+<p>Вы всегда можете клонировать репозиторий и собрать приложение самостоятельно — сторонних зависимостей, кроме NuGet, нет:</p>
+<pre><code>git clone https://github.com/YOURUSER/AI_IT_Company.git
+cd AI_IT_Company
+dotnet restore
+dotnet build -c Release
+dotnet publish -c Release -r win-x64 --self-contained</code></pre>
+
+<h2>Проверка целостности</h2>
+<p>В каждый релиз включён файл контрольных сумм SHA-256 (<code>SHA256SUMS.txt</code>). Проверить в PowerShell:</p>
+<pre><code>Get-FileHash .\AI_IT_Company-x.y.z.zip -Algorithm SHA256</code></pre>
+
+<h2>История изменений</h2>
+<p>Полный changelog — на странице <a data-gh-releases href="#">Releases</a>. Для каждого релиза указаны новые возможности, исправления и известные ограничения.</p>
+</main>
+
+<footer><div class="container foot">
+  <div>© <span id="year">2025</span> AI IT Company.</div>
+  <div><a href="privacy.html">Приватность</a> · <a href="license.html">Лицензия</a> · <a data-gh-repo href="#">GitHub</a></div>
+</div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script src="../assets/js/main.js"></script>
+</body></html>
