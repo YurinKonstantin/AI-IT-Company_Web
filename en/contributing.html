@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contribute · AI IT Company</title>
+<link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<header><div class="container nav">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>AI IT Company</a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a><a href="quick-start.html">Quick Start</a>
+    <a href="download.html">Download</a><a href="faq.html">FAQ</a>
+    <a href="contributing.html">Contribute</a><a href="license.html">License</a>
+  </nav>
+  <div class="nav-tools">
+    <div class="lang-switch">
+      <a href="../en/contributing.html" class="active">EN</a>
+      <a href="../ru/contributing.html">RU</a>
+      <a href="../zh/contributing.html">中文</a>
+    </div>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </div>
+</div></header>
+
+<main class="article">
+<h1>Contribute</h1>
+<p class="updated">Every kind of help matters — from a bug report to a new agent.</p>
+
+<h2>Ways to help</h2>
+<ul>
+  <li><strong>Test models</strong> on your hardware and share results — which models work best for which agents at which parameter sizes. This is the most valuable contribution right now.</li>
+  <li><strong>Report bugs</strong> — open an Issue with the log, the raw model output (dumped to <code>_raw_*.txt</code>), and your hardware/model config.</li>
+  <li><strong>Improve prompts</strong> — if you found a system-prompt tweak that makes an agent behave better, share it.</li>
+  <li><strong>Add features</strong> — new agent roles, new project types, better UI.</li>
+  <li><strong>Translate</strong> — help expand localization of the app and the website.</li>
+</ul>
+
+<h2>Fork & PR workflow</h2>
+<ol>
+  <li>Fork the repo on GitHub.</li>
+  <li>Create a feature branch: <code>git checkout -b feature/my-improvement</code>.</li>
+  <li>Make focused, small commits with clear messages.</li>
+  <li>Push to your fork and open a Pull Request against <code>main</code>.</li>
+  <li>Describe what you changed, why, and how you tested it.</li>
+</ol>
+
+<h2>Coding style</h2>
+<ul>
+  <li>Follow standard C# conventions (<code>PascalCase</code> for types/methods, <code>_camelCase</code> for private fields).</li>
+  <li>Prefer async/await, <code>CancellationToken</code> everywhere, no <code>.Result</code> or <code>.Wait()</code>.</li>
+  <li>Keep methods short. Extract helpers over adding comments.</li>
+  <li>Nullability enabled — annotate nullable types explicitly.</li>
+</ul>
+
+<h2>Reporting model behavior</h2>
+<p>When reporting an issue caused by a specific model, please include:</p>
+<ul>
+  <li>Model name and exact tag (e.g. <code>qwen2.5-coder:14b-q4_K_M</code>).</li>
+  <li>Which agent was affected.</li>
+  <li>Your prompt.</li>
+  <li>The raw output file (<code>_raw_*.txt</code> or <code>_architect_bad_json_*.txt</code>) from the output folder.</li>
+  <li>Your hardware (CPU / RAM / GPU VRAM).</li>
+</ul>
+
+<h2>Code of conduct</h2>
+<p>Be kind. Be constructive. Assume good intent. No harassment, discrimination or personal attacks — such contributions will be rejected regardless of technical quality.</p>
+</main>
+
+<footer><div class="container foot">
+  <div>© <span id="year">2025</span> AI IT Company.</div>
+  <div><a href="privacy.html">Privacy</a> · <a href="license.html">License</a> · <a data-gh-repo href="#">GitHub</a></div>
+</div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script src="../assets/js/main.js"></script>
+</body></html>
