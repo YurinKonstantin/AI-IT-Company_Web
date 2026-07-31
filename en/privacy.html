@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy · AI IT Company</title>
+<link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<header><div class="container nav">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>AI IT Company</a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a><a href="quick-start.html">Quick Start</a>
+    <a href="download.html">Download</a><a href="faq.html">FAQ</a>
+    <a href="contributing.html">Contribute</a><a href="license.html">License</a>
+  </nav>
+  <div class="nav-tools">
+    <div class="lang-switch">
+      <a href="../en/privacy.html" class="active">EN</a>
+      <a href="../ru/privacy.html">RU</a>
+      <a href="../zh/privacy.html">中文</a>
+    </div>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </div>
+</div></header>
+
+<main class="article">
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: 2026</p>
+
+<h2>Short version</h2>
+<p><strong>The application does not collect, store, or transmit any of your data.</strong> AI IT Company runs entirely on your local computer and communicates only with a locally installed Ollama instance.</p>
+
+<h2>1. What the application does</h2>
+<p>AI IT Company is a desktop tool that sends your prompts to a local large language model (via Ollama) and saves the generated code to your local disk. All data — prompts, generated code, logs, git commits — stays on your machine.</p>
+
+<h2>2. What we do <em>not</em> collect</h2>
+<ul>
+  <li>No telemetry, no analytics, no crash reports are sent anywhere.</li>
+  <li>No user account is required. There is no login, no sign-up.</li>
+  <li>No personal data is transmitted to the author or any third party.</li>
+  <li>No advertising identifiers, cookies, or tracking pixels.</li>
+</ul>
+
+<h2>3. Network connections</h2>
+<p>The application makes network requests only in the following cases:</p>
+<ul>
+  <li><strong>To your local Ollama instance</strong> (default <code>http://localhost:11434</code>) — for model inference and management.</li>
+  <li><strong>To the Ollama model registry</strong> — only when you explicitly click "Pull model" — to download the model weights you selected.</li>
+  <li><strong>To GitHub</strong> — only when you explicitly click "Check for updates" or open a GitHub link from the app.</li>
+</ul>
+<p>Any external network activity is initiated by your explicit action.</p>
+
+<h2>4. Local storage</h2>
+<p>The application stores locally on your computer:</p>
+<ul>
+  <li>Application settings (Ollama URL, agent configurations, custom prompts) in <code>%LocalAppData%\AiItCompany</code>.</li>
+  <li>Generated projects in the output folder you configure (default <code>%LocalAppData%\AiItCompany\Output</code>).</li>
+  <li>Log files, retained for 14 days.</li>
+</ul>
+<p>You can delete these folders at any time without affecting the application.</p>
+
+<h2>5. Third-party services</h2>
+<p>The application uses <a href="https://ollama.com">Ollama</a> to run models locally. Ollama itself is a separate open-source product with its own privacy policy. AI IT Company does not send any data to services other than your local Ollama instance.</p>
+<p>If you configure the application to use a remote endpoint (e.g. an OpenAI-compatible server on a different host), the privacy policy of that endpoint applies to data sent to it.</p>
+
+<h2>6. Children's privacy</h2>
+<p>The application is not directed to children under 13. It contains no online features that would collect information from children.</p>
+
+<h2>7. Changes to this policy</h2>
+<p>If this policy changes, the updated version will be published on this page with a new "Last updated" date. Since we collect no data, changes will primarily reflect changes in features that affect network behavior.</p>
+
+<h2>8. Contact</h2>
+<p>Questions about privacy can be raised as issues in the <a data-gh-repo href="#">GitHub repository</a>.</p>
+</main>
+
+<footer><div class="container foot">
+  <div>© <span id="year">2025</span> AI IT Company.</div>
+  <div><a href="privacy.html">Privacy</a> · <a href="license.html">License</a> · <a data-gh-repo href="#">GitHub</a></div>
+</div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script src="../assets/js/main.js"></script>
+</body></html>
