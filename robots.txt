@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://Yurinkonstantin.github.io/AI_IT_Company_Web/sitemap.xml
