@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Download · AI IT Company</title>
+<link rel="stylesheet" href="../assets/css/style.css"></head><body>
+<header><div class="container nav">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>AI IT Company</a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a><a href="quick-start.html">Quick Start</a>
+    <a href="download.html">Download</a><a href="faq.html">FAQ</a>
+    <a href="contributing.html">Contribute</a><a href="license.html">License</a>
+  </nav>
+  <div class="nav-tools">
+    <div class="lang-switch">
+      <a href="../en/download.html" class="active">EN</a>
+      <a href="../ru/download.html">RU</a>
+      <a href="../zh/download.html">中文</a>
+    </div>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </div>
+</div></header>
+
+<main class="article">
+<h1>Download</h1>
+<p class="updated">All builds are hosted on GitHub Releases</p>
+
+<div class="cta" style="margin:32px 0">
+  <a class="btn btn-primary" data-gh-latest href="#">⬇ Latest release (recommended)</a>
+  <a class="btn btn-secondary" data-gh-releases href="#">All releases</a>
+</div>
+
+<h2>System requirements</h2>
+<ul>
+  <li>Windows 10 version 1809 or Windows 11 (x64).</li>
+  <li>Windows App SDK runtime — installed automatically by the app on first run if missing.</li>
+  <li>.NET 10 Desktop Runtime.</li>
+  <li>Ollama installed and running locally.</li>
+  <li>Free disk space: 500 MB for the app itself + space for models (each 7B model ≈ 4–5 GB).</li>
+</ul>
+
+<h2>How to install</h2>
+<ol>
+  <li>Download the latest ZIP archive from the button above.</li>
+  <li>Unpack it into any folder (e.g. <code>C:\Programs\AI_IT_Company</code>).</li>
+  <li>Run <code>AI_IT_Company.exe</code>.</li>
+  <li>If Windows SmartScreen asks — click <em>More info → Run anyway</em> (builds are unsigned).</li>
+  <li>Follow the <a href="quick-start.html">Quick Start</a> to configure Ollama and agents.</li>
+</ol>
+
+<h2>Building from source</h2>
+<p>You can always clone and build the app yourself — no third-party dependencies beyond NuGet:</p>
+<pre><code>git clone https://github.com/YOURUSER/AI_IT_Company.git
+cd AI_IT_Company
+dotnet restore
+dotnet build -c Release
+dotnet publish -c Release -r win-x64 --self-contained</code></pre>
+
+<h2>Verifying builds</h2>
+<p>Each release includes SHA-256 checksums (<code>SHA256SUMS.txt</code>). Verify with PowerShell:</p>
+<pre><code>Get-FileHash .\AI_IT_Company-x.y.z.zip -Algorithm SHA256</code></pre>
+
+<h2>Release notes</h2>
+<p>Full changelog is available on the <a data-gh-releases href="#">Releases page</a>. Each release describes new features, fixes, and known issues.</p>
+</main>
+
+<footer><div class="container foot">
+  <div>© <span id="year">2025</span> AI IT Company.</div>
+  <div><a href="privacy.html">Privacy</a> · <a href="license.html">License</a> · <a data-gh-repo href="#">GitHub</a></div>
+</div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script src="../assets/js/main.js"></script>
+</body></html>
