@@ -1,0 +1,5 @@
+# Отключаем Jekyll, чтобы GitHub Pages отдавал файлы как есть
+theme: null
+plugins: []
+include:
+  - assets
