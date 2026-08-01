@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+  <!-- Главная английская страница -->
+  <url>
+    <loc>https://yurinkonstantin.github.io/AI-IT-Company_Web/en/index.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <!-- Быстрый старт -->
+  <url>
+    <loc>https://yurinkonstantin.github.io/AI-IT-Company_Web/en/quick-start.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <!-- Скачать -->
+  <url>
+    <loc>https://yurinkonstantin.github.io/AI-IT-Company_Web/en/download.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <!-- Вопросы и ответы -->
+  <url>
+    <loc>https://yurinkonstantin.github.io/AI-IT-Company_Web/en/faq.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <!-- Для контрибьюторов -->
+  <url>
+    <loc>https://yurinkonstantin.github.io/AI-IT-Company_Web/en/contributing.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+    <!-- Главная русская страница -->
+  <url>
+    <loc>https://yurinkonstantin.github.io/AI-IT-Company_Web/ru/index.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <!-- Быстрый старт -->
+  <url>
+    <loc>https://yurinkonstantin.github.io/AI-IT-Company_Web/ru/quick-start.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <!-- Скачать -->
+  <url>
+    <loc>https://yurinkonstantin.github.io/AI-IT-Company_Web/ru/download.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <!-- Вопросы и ответы -->
+  <url>
+    <loc>https://yurinkonstantin.github.io/AI-IT-Company_Web/ru/faq.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <!-- Для контрибьюторов -->
+  <url>
+    <loc>https://yurinkonstantin.github.io/AI-IT-Company_Web/ru/contributing.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+</urlset>
